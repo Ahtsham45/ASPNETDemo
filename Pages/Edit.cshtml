@@ -1,0 +1,26 @@
+﻿@page
+@model WebApplication1.Pages.EditModel
+@{
+    ViewData["Title"] = "Update To Do Item";
+}
+<h2>Update To Do Item</h2>
+
+<form method="post">
+    <input type="hidden" asp-for="MyToDoItem.Id" />
+    <div>
+        <label>Name</label>
+        <input type="text" asp-for="MyToDoItem.Name" />
+    </div>
+
+    <div>
+        <label>Priority</label>
+        <input type="text" asp-for="MyToDoItem.Priority" />
+    </div>
+
+    <div>
+        <label>Completed?</label>
+        <input type="checkbox" asp-for="MyToDoItem.Completed" />
+    </div>
+
+    <button type="submit">Update</button>
+</form>  

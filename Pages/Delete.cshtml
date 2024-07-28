@@ -1,0 +1,27 @@
+﻿@page
+@model WebApplication1.Pages.DeleteModel
+@{
+    ViewData["Title"] = "Delete To Do Item";
+}
+<h2>Delete To Do Item?</h2>
+
+<form method="post">
+    <input type="hidden" asp-for="MyToDoItem.Id" />
+    <div>
+        <label>Name</label>
+
+        <input type="text" readonly asp-for="MyToDoItem.Name" />
+    </div>
+
+    <div>
+        <label>Priority</label>
+        <input type="text" readonly asp-for="MyToDoItem.Priority" />
+    </div>
+
+    <div>
+        <label>Completed?</label>
+        <input type="checkbox" readonly asp-for="MyToDoItem.Completed" />
+    </div>
+
+    <button type="submit">Delete</button>
+</form>  

@@ -1,0 +1,32 @@
+﻿@page
+@model WebApplication1.Pages.IndexModel
+@{
+    ViewData["Title"] = "My To Do List";
+}
+<h2>My "To Do" List</h2>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>Task</th>
+            <th>Priority</th>
+            <th>Completed? (y/n)</th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model.myToDoList)
+        {
+            <tr>
+                <td>@item.Name</td>
+                <td>@item.Priority</td>
+                <td>@item.Completed</td>
+                <td>
+                    <a href="/Edit?id=@item.Id">Edit</a> |
+                    <a href="/Delete?id=@item.Id">Delete</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+<a href="/Create">Add New "To Do" Item</a> 

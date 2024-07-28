@@ -1,0 +1,37 @@
+﻿@page
+@model WebApplication1.Pages.CreateModel
+@{
+    ViewData["Title"] = "Add To Do Item";
+}
+
+<h2>Add To Do Item</h2>
+
+<form method="post">
+
+    <div>
+
+        <label>Name</label>
+
+        <input type="text" asp-for="ToDoItem.Name" />
+
+    </div>
+
+    <div>
+
+        <label>Priority</label>
+
+        <input type="text" asp-for="ToDoItem.Priority" />
+
+    </div>
+
+    <div>
+
+        <label>Completed?</label>
+
+        <input type="checkbox" asp-for="ToDoItem.Completed" />
+
+    </div>
+
+    <button type="submit">Add</button>
+
+</form>  
